@@ -1,0 +1,23 @@
+显式类型定义： const b string = "abc"
+隐式类型定义： const b = "abc"
+并行赋值的形式：
+const beef, two, c = "eat", 2, "veg"
+const Monday, Tuesday, Wednesday, Thursday, Friday, Saturday = 1, 2, 3, 4, 5, 6
+const (
+	Monday, Tuesday, Wednesday = 1, 2, 3
+	Thursday, Friday, Saturday = 4, 5, 6
+)
+枚举：
+const (
+	a = iota  // a = 0
+	b         // b = 1
+	c         // c = 2
+	d = 5     // d = 5   
+	e         // e = 5
+)
+const (
+	Apple, Banana = iota + 1, iota + 2 // Apple=1 Banana=2
+	Cherimoya, Durian                  // Cherimoya=2 Durian=3
+	Elderberry, Fig                    // Elderberry=3, Fig=4
+
+)
