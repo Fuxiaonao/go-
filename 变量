@@ -1,0 +1,17 @@
+声明变量的一般形式是使用 var 关键字：var identifier type
+int* a, b;
+声明为指针类型：
+var a, b *int
+这种因式分解关键字的写法一般用于声明全局变量:
+var (
+	a int
+	b bool
+	str string
+)
+当一个变量被声明之后，系统自动赋予它该类型的零值：int 为 0，float32(64) 为 0.0，bool 为 false，string 为空字符串，指针为 nil。记住，所有的内存在 Go 中都是经过初始化的。
+
+当你在函数体内声明局部变量时，应使用简短声明语法 :=，例如：
+a := 1
+
+值类型和引用类型
+int、float、bool 和 string 这些基本类型都属于值类型，使用这些类型的变量直接指向存在内存中的值：
